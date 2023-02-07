@@ -1,0 +1,16 @@
+Feature: LoginPage Validation
+
+	@tag1
+  Scenario: Validate the valid username and password
+   Given Login into the URL
+   When Enter the username "daisyrubycatharine" 
+   And Enter the password "RP65IQ"
+   And Click the login button
+   Then Validate the home page title
+   
+	@tag2
+ Scenario: Validate the invalid username and invalid password
+   Given Login into the URL
+   When Enter the username "Aiite123" 
+   And Enter the password "123412345"
+   Then Validate the home page title
